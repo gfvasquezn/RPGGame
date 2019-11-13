@@ -24,6 +24,7 @@ public class Asset {
 		this.id = id;
 	}
 	public String getPath() {
+		System.out.println(path);
 		return path;
 	}
 	public void setPath(String path) {

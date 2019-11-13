@@ -29,13 +29,8 @@ import javax.persistence.Table;
 	    private Set<SpentScore> spentScore= new HashSet<SpentScore> (0);
 	    
 	    @OneToMany (fetch=FetchType.LAZY, mappedBy="user")
-	    private Set<missionHistory> missionHistory= new HashSet<missionHistory> (0);
-		
-	    @OneToOne(cascade = CascadeType.ALL)
-	    @JoinColumn(name = "user_stage_id",     referencedColumnName = "id")
-	    private UserStage userStage;
-
-	    
+	    private Set<MissionHistory> missionHistory= new HashSet<MissionHistory> (0);
+			    
 		public long getId() {
 			return id;
 		}
@@ -66,12 +61,5 @@ import javax.persistence.Table;
 		public void setSpentScore(Set<SpentScore> spentScore) {
 			this.spentScore = spentScore;
 		}
-		public UserStage getUserStage() {
-			return userStage;
-		}
-		public void setUserStage(UserStage userStage) {
-			this.userStage = userStage;
-		}
-		
 		
 	}

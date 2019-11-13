@@ -17,9 +17,6 @@ public class UserStage {
 	private long id;
 	private long idUser;
 
-    @OneToOne(mappedBy = "userStage")
-    private User user;
-
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "id_quest",     referencedColumnName = "id")
     private Quest quest;
@@ -66,11 +63,5 @@ public class UserStage {
 		this.idUser = idUser;
 	}
 
-	public User getUser() {
-		return user;
-	}
-	public void setUser(User user) {
-		this.user = user;
-	}
 
 }

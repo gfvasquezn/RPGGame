@@ -11,7 +11,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="mission_history")
-public class missionHistory {
+public class MissionHistory {
 	
 	public long getMissionFrom() {
 		return missionFrom;
